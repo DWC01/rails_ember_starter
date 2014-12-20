@@ -6,6 +6,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder'
+gem 'responders'
 gem 'font-awesome-rails'
 gem "bootstrap-sass"
 gem 'active_model_serializers'
