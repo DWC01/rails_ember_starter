@@ -27,12 +27,12 @@ module Api
       resources = resource_class.where(query_params)
 
       instance_variable_set(plural_resource_name, resources)
-      respond_with instance_variable_get(plural_resource_name)
+      render json: instance_variable_get(plural_resource_name)
     end
 
     # GET /api/{plural_resource_name}/1
     def show
-      respond_with get_resource
+      render json: get_resource
     end
 
     # PATCH/PUT /api/{plural_resource_name}/1
