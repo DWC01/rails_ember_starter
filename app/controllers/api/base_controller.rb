@@ -9,7 +9,7 @@ module Api
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
-        render :show, status: :created
+        render json: get_resource, status: :created
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end

@@ -20,6 +20,23 @@ describe Api::UsersController do
     end
   end
 
+  context 'POST #create' do
+    
+    before do
+      post "/api/users/", format: :json, :user => { first_name: 'Test', last_name: 'McTesterson' }
+    end
+
+    it 'responds successfully with an HTTP 201 status code' do
+      expect(response).to be_success
+      expect(response.code).to eq('201')
+    end
+
+    it 'retreives newly created user' do
+      user = User.all
+      expect(user.last.first_name).to eq('Test')
+    end
+  end
+
   context 'GET #show' do
     
     before do
