@@ -10,7 +10,7 @@ gem 'responders'
 gem 'font-awesome-rails'
 gem "bootstrap-sass"
 gem 'active_model_serializers'
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', '0.3.0'
 gem 'unicorn'
 
 group :development do
